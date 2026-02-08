@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Input Data & Grafik Dinamis</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+    <h2>Input Data Part & Tanggal</h2>
+
+    <div class="controls">
+        <input type="date" id="dateInput" />
+        <button onclick="handleAddDate()">+ Tanggal</button>
+
+        <button onclick="addPart()">+ Part</button>
+
+        <button onclick="prevDates()">⬅ Prev</button>
+        <button onclick="nextDates()">Next ➡</button>
+
+        <button onclick="manualSave()">Save</button>
+    </div>
+
+    <div class="table-wrapper">
+        <table>
+            <thead>
+                <tr id="dateRow">
+                    <th>Part / Tanggal</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody"></tbody>
+        </table>
+    </div>
+
+    <h3>Grafik</h3>
+    <canvas id="chartCanvas"></canvas>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
